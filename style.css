@@ -6,7 +6,23 @@ h1 {
     color: white;
     font-size: 120%;
 }
-
+.contactsIcon{
+    padding: 2.5vh;
+    width: max-content;
+    margin: 2vh;
+}
+.conIcon{
+    padding: 2vh;
+    margin-right: 2vh;
+    font-size: 120%;
+    outline: 1px solid darkgrey;
+    border-radius: 6px;
+}
+.conIcon:hover{
+    outline: 1px solid white;
+    background-color: white;
+    color: black;
+}
 .sec2 {
     color: black;
     padding-top: 5vh;
@@ -132,10 +148,10 @@ footer {
     width: 50%;
     border-radius: 100%;
     position: absolute;
-    z-index: 11111;
 }
 @media (max-width: 500px) {
     .picSec1 {
+        display: none;
         opacity: 0;
     }
 }
