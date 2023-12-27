@@ -1,0 +1,270 @@
+/* General Styles */
+body{
+    width: fit-content;
+}
+h1 {
+    color: white;
+    font-size: 120%;
+}
+
+.sec2 {
+    color: black;
+    padding-top: 5vh;
+    font-size: 5.5vh;
+    line-height: 8vh;
+}
+
+#section1, #section5, #section6 {
+    height: 100vh;
+    padding: 10vh;
+}
+#section3,#section4{
+    height: auto;
+    padding-top: 10vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-bottom: 5vh; 
+}
+#section2{
+    height: 100vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-bottom: 5vh; 
+
+}
+#section1, #section3, #section4, #section5, #section6 {
+    background-color: black;
+}
+
+#section2 {
+    background-color: white;
+}
+
+.navbar {
+    background-color: black;
+    width: 100;
+}
+
+a {
+    color: grey;
+}
+
+a:hover, a:active {
+    color: white;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.sec3, .sec4 {
+    color: white;
+    font-size: 8vh;
+}
+
+footer {
+    background-color: white;
+    color: grey;
+    padding: 1rem; 
+    font-size: 14px; 
+}
+
+.footerLinks:hover, .footerLinks:active {
+    color: black;
+    font-weight: bold;
+}
+
+.container .text {
+    font-size: 120%;
+    position: relative;
+    color: white;
+    font-size: 8vh;
+    font-weight: 600;
+}
+
+.container .text .firstText {
+    color: white;
+    font-size: 120%;
+}
+
+.text.secondText:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 5px solid black;
+    animation: animate 5s steps(8) infinite;
+}
+@media (max-width: 768px) {
+    .text.secondText:before {
+        width: 100%;
+    }
+
+    .container .text {
+        font-size: 6vh; 
+    }
+}
+
+@keyframes animate {
+    40%, 60% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.textsec1 {
+    padding-top: 5vh;
+    color: gray;
+    font-weight: 300;
+    font-size: 130%;
+}
+
+.picSec1 {
+    width: 50%;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 11111;
+}
+@media (max-width: 500px) {
+    .picSec1 {
+        opacity: 0;
+    }
+}
+.container {
+    align-items: center;
+}
+
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+
+.tag-list li {
+    padding: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem gray;
+}
+
+.tag-list li:hover {
+    background: black;
+    color: white;
+}
+
+/* Scroller Animation Styles */
+.scroller {
+    max-width: 90vw;
+    outline: 3px solid lime;
+}
+
+.scroller_inner {
+    padding-block: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller_inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 10s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+.grid-container {
+    padding-top: 5vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 4px;
+}
+
+.cell {
+    padding-top: 10vh; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.box {
+    border-radius: 8px;
+    width: 70%;
+    z-index: 11111;
+}
+
+@media (max-width: 768px) {
+    #section4 {
+        padding-bottom: 5vh; 
+    }
+    footer {
+        padding: 1rem;
+        font-size: 14px;
+    }
+}
+p {
+    color: gray;
+}
+#section4 li{
+    color: gray;
+    margin-left: -4vh;
+}
+#section4 p,#section4 a {
+    color: white;
+}
+#section4 a:hover{
+    color: gray;
+}  
+.hidden{
+    opacity: 0;
+    transition: ease-out 0.5s;
+    animation-duration: 3s;
+}
+.visible{
+    opacity: 1;
+}
+#section1 h3{
+    padding-left: 2vh;
+    line-height: 4vh;
+    font-size: 3vh;
+}
